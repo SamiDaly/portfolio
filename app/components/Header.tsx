@@ -3,7 +3,7 @@ import Button from "./Buttons";
 
 export default function Header() {
   return (
-    <header className="w-full min-h-[60vh] flex items-center justify-between px-10 bg-[#fdf6e3]">
+    <header className="relative w-full min-h-[60vh] flex items-center justify-between px-10 bg-[#fdf6e3]">
       <Image src="/next.svg" alt="background" fill className="object-cover object-[50%_20%] opacity-5" />
       <div className="max-w-xl">
         <p className="text-gray-600 text-lg mb-2">Frontend Developer</p>
@@ -19,7 +19,7 @@ export default function Header() {
       </div>
       <div className="shrink-0">
         <Image
-          src="/samidaly (1).png"
+          src="/samidaly-1.png"
           alt="sami"
           width={320}
           height={420}
