@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { ThemeContext } from "./Context";
-
+// ett element tvingas ?
 type ThemeProviderProps = {
   children: ReactNode;
 };
