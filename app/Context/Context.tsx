@@ -1,12 +1,12 @@
+"use client";
 import { createContext } from "react";
-import { Portfolio } from "../models/Type";
 
-export type PortfolioContextType = {
-  portfolio: Portfolio[];
-  inspect: (text: string) => void;
+export type ThemeContextType = {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
 };
 
-export const MyContext = createContext<PortfolioContextType>({
-  portfolio: [],
-  inspect: () => {}
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: "light",
+  toggleTheme: () => {},
 });
