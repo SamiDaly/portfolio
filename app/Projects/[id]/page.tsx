@@ -1,14 +1,20 @@
-"use client";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getProjectById } from "@/lib/projects";
-
-export default function ProjectDetails() {
-  const params = useParams();
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;
+type Props = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+export default async function ProjectDetails({ params }: Props) {
+  const { id } = await params;
+  //const params = useParams();
 
   const project = getProjectById(id);
+
+  // const id = Array.isArray(params.id) ? params.id[0] : params.id;
+
+  //const project = getProjectById(id);
 
   if (!project) {
     return (
