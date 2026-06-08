@@ -28,7 +28,7 @@ export default function ProjectPage() {
               <Link href={`/projects/${project.id}`} className="block">
                 <div className="relative overflow-hidden rounded-t-3xl">
                   <Image
-                    src={encodeURI(project.imageUrl)}
+                    src={project.imageUrl}
                     alt={project.title}
                     width={600}
                     height={380}

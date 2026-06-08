@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getProjectById } from "@/lib/projects";
+
 type Props = {
   params: Promise<{
     id: string;
@@ -40,7 +41,7 @@ export default async function ProjectDetails({ params }: Props) {
             <div className="space-y-6">
               <div className="overflow-hidden rounded-3xl bg-slate-800 shadow-inner shadow-black/20">
                 <Image
-                  src={encodeURI(project.imageUrl)}
+                  src={project.imageUrl}
                   alt={`${project.title} screenshot`}
                   width={1200}
                   height={700}
