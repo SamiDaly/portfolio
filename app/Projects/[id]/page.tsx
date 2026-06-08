@@ -6,15 +6,12 @@ type Props = {
     id: string;
   }>;
 };
+
 export default async function ProjectDetails({ params }: Props) {
   const { id } = await params;
-  //const params = useParams();
+  //const params = useParams(); ????????
 
   const project = getProjectById(id);
-
-  // const id = Array.isArray(params.id) ? params.id[0] : params.id;
-
-  //const project = getProjectById(id);
 
   if (!project) {
     return (
