@@ -42,12 +42,14 @@ export default function ProjectPage() {
               </Link>
 
               <div className="border-t border-slate-800 px-6 py-4">
-                <li>
+                <a
                   href={project.githubLink}
-                  target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center
-                  rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-200"
+                >
                   Github
-                </li>
+                </a>
               </div>
             </div>
           ))}

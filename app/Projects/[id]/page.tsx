@@ -56,7 +56,6 @@ export default async function ProjectDetails({ params }: Props) {
                 <h2 className="text-2xl font-semibold mb-3">Project details</h2>
                 <p className="text-slate-400">Use the GitHub Link to see the project code.</p>
               </div>
-
               <a
                 href={project.githubLink}
                 target="_blank"
