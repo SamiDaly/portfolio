@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getProjectById } from "@/lib/projects";
+import { getProjectById, projects } from "@/lib/projects";
 
 type Props = {
   params: Promise<{
     id: string;
   }>;
 };
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
 
 export default async function ProjectDetails({ params }: Props) {
   const { id } = await params;
